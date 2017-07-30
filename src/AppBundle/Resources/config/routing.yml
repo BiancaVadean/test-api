@@ -1,0 +1,9 @@
+users_create:
+    path: /users/new
+    defaults: {_controller: AppBundle:Users:create}
+    methods: [POST]
+
+users_get:
+    path: /users
+    defaults: {_controller: AppBundle:Users:getUsers}
+    methods: [GET]

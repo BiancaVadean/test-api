@@ -1,0 +1,41 @@
+AppBundle\Entity\Address:
+    type: entity
+    table: addresses
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        street:
+            type: string
+            length: '255'
+            nullable: false
+        number:
+            type: string
+            length: '255'
+            nullable: false
+        details:
+            type: string
+            length: '255'
+            nullable: true
+        country:
+            type: string
+            length: '255'
+            nullable: false
+        city:
+            type: string
+            length: '255'
+            nullable: false
+        county:
+            type: string
+            length: '255'
+            nullable: false
+    manyToOne:
+        user:
+            targetEntity: AppBundle\Entity\User
+            inversedBy: addresses
+            joinColumn:
+                name: user_id
+                referencedColumnName: id
+                onDelete: CASCADE

@@ -1,0 +1,11 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+#app_index:
+#    path: /index
+#    defaults: { _controller: AppBundle:Default:index }
+
+rest:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /

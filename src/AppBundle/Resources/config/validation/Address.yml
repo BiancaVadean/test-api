@@ -1,0 +1,30 @@
+AppBundle\Entity\Address:
+    properties:
+        street:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        number:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        details:
+            - Length:
+                max: 255
+        country:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        city:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        county:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255

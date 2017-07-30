@@ -1,0 +1,17 @@
+AppBundle\Entity\User:
+    properties:
+        email:
+            - Email: ~
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 2
+                max: 255
+        addresses:
+            - Valid: ~
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
