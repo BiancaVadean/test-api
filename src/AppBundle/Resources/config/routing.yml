@@ -7,3 +7,18 @@ users_get:
     path: /users
     defaults: {_controller: AppBundle:Users:getUsers}
     methods: [GET]
+
+users_update:
+    path: /users/{id}
+    defaults: {_controller: AppBundle:Users:updateUsers}
+    methods: [PUT]
+
+users_delete:
+    path: /users/{id}
+    defaults: {_controller: AppBundle:Users:deleteUsers}
+    methods: [DELETE]
+
+user_get:
+    path: /users/{id}
+    defaults: {_controller: AppBundle:Users:getUser}
+    methods: [GET]

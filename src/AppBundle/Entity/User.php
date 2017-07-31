@@ -4,6 +4,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * Class User
@@ -24,7 +25,7 @@ class User
     protected $name;
 
     /**
-     * @var ArrayCollection
+     * @var Collection
      */
     protected $addresses;
 
@@ -68,16 +69,16 @@ class User
     /**
      * @return ArrayCollection
      */
-    public function getAddresses(): ArrayCollection
+    public function getAddresses(): Collection
     {
         return $this->addresses;
     }
 
     /**
-     * @param ArrayCollection $addresses
+     * @param Collection $addresses
      * @return User
      */
-    public function setAddresses(?ArrayCollection $addresses): User
+    public function setAddresses(?Collection $addresses): User
     {
         $this->addresses = $addresses;
 

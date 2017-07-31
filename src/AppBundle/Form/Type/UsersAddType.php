@@ -30,7 +30,7 @@ class UsersAddType extends AbstractType
                     'entry_type'   => UserAddressType::class,
                     'allow_add'    => true,
                     'allow_delete' => true,
-                    'by_reference' => false,
+                    'by_reference' => true,
                     'required'     => true,
                 ]
             );

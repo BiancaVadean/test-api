@@ -87,4 +87,14 @@ fos_rest:
         rules:
             - { path: '^/', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: false }
             - { path: ^/, stop: true }
+    exception:
+        enabled: true
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Symfony\Component\Security\Core\Exception\AuthenticationCredentialsNotFoundException': 403
+            'Symfony\Component\Security\Core\Exception\UsernameNotFoundException': 401
+            'Symfony\Component\Security\Core\Exception\AccountExpiredException': 401
+            'Symfony\Component\Security\Core\Exception\BadCredentialsException': 401
 
+
+nelmio_api_doc: ~

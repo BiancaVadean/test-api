@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "70611a152f0d695e55d5b52296c4fcfb",
+    "content-hash": "947a0aba4fb314209e321536608fa1ff",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -839,45 +839,6 @@
             "time": "2016-12-18T15:42:34+00:00"
         },
         {
-            "name": "exsyst/swagger",
-            "version": "v0.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GuilhemN/swagger.git",
-                "reference": "5626b604c482042bdfc8b9e241641aa1f02df7eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GuilhemN/swagger/zipball/5626b604c482042bdfc8b9e241641aa1f02df7eb",
-                "reference": "5626b604c482042bdfc8b9e241641aa1f02df7eb",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "EXSyst\\Component\\Swagger\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ener-Getick",
-                    "email": "egetick@gmail.com"
-                }
-            ],
-            "description": "A php library to manipulate Swagger specifications",
-            "time": "2017-06-25T07:32:59+00:00"
-        },
-        {
             "name": "friendsofsymfony/rest-bundle",
             "version": "2.2.0",
             "source": {
@@ -1327,6 +1288,57 @@
             "time": "2017-05-17T10:26:43+00:00"
         },
         {
+            "name": "michelf/php-markdown",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/michelf/php-markdown.git",
+                "reference": "1f51cc520948f66cd2af8cbc45a5ee175e774220"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/1f51cc520948f66cd2af8cbc45a5ee175e774220",
+                "reference": "1f51cc520948f66cd2af8cbc45a5ee175e774220",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-lib": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Michelf": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Michel Fortin",
+                    "email": "michel.fortin@michelf.ca",
+                    "homepage": "https://michelf.ca/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "https://daringfireball.net/"
+                }
+            ],
+            "description": "PHP Markdown",
+            "homepage": "https://michelf.ca/projects/php-markdown/",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2016-10-29T18:58:20+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -1406,57 +1418,64 @@
         },
         {
             "name": "nelmio/api-doc-bundle",
-            "version": "v3.0.0-BETA1",
+            "version": "2.13.2",
+            "target-dir": "Nelmio/ApiDocBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "ccdcecb77a280a4f62111b3a7a90cd0fd1afddfa"
+                "reference": "adcdd91950db72346be4a8af82cc05883b97cef3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/ccdcecb77a280a4f62111b3a7a90cd0fd1afddfa",
-                "reference": "ccdcecb77a280a4f62111b3a7a90cd0fd1afddfa",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/adcdd91950db72346be4a8af82cc05883b97cef3",
+                "reference": "adcdd91950db72346be4a8af82cc05883b97cef3",
                 "shasum": ""
             },
             "require": {
-                "exsyst/swagger": "~0.2.3",
-                "php": "~7.0|~7.1",
-                "symfony/framework-bundle": "^2.8|^3.0",
-                "symfony/property-info": "^2.8|^3.0",
-                "zircote/swagger-php": "^2.0.9"
+                "michelf/php-markdown": "~1.4",
+                "php": ">=5.4",
+                "symfony/console": "~2.3|~3.0",
+                "symfony/framework-bundle": "~2.3|~3.0",
+                "symfony/twig-bundle": "~2.3|~3.0"
+            },
+            "conflict": {
+                "jms/serializer": "<0.12",
+                "jms/serializer-bundle": "<0.11",
+                "symfony/symfony": "~2.7.8",
+                "twig/twig": "<1.12"
             },
             "require-dev": {
-                "api-platform/core": "^2.0.3",
-                "doctrine/annotations": "^1.2",
-                "friendsofsymfony/rest-bundle": "^2.0",
-                "phpdocumentor/reflection-docblock": "^3.1",
-                "phpunit/phpunit": "^5.4",
-                "sensio/framework-extra-bundle": "^3.0",
-                "symfony/asset": "^2.8|^3.0",
-                "symfony/browser-kit": "^2.8|^3.0",
-                "symfony/cache": "^3.1",
-                "symfony/config": "^2.8|^3.0",
-                "symfony/console": "^2.8|^3.0",
-                "symfony/dom-crawler": "^2.8|^3.0",
-                "symfony/phpunit-bridge": "^3.2",
-                "symfony/property-access": "^2.8|^3.0",
-                "symfony/twig-bundle": "^2.8|^3.0",
-                "symfony/validator": "^2.8|^3.0"
+                "doctrine/doctrine-bundle": "~1.5",
+                "doctrine/orm": "~2.3",
+                "dunglas/api-bundle": "~1.0@dev",
+                "friendsofsymfony/rest-bundle": "~1.0|~2.0",
+                "jms/serializer-bundle": ">=0.11",
+                "sensio/framework-extra-bundle": "~3.0",
+                "symfony/browser-kit": "~2.3|~3.0",
+                "symfony/css-selector": "~2.3|~3.0",
+                "symfony/finder": "~2.3|~3.0",
+                "symfony/form": "~2.3|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0",
+                "symfony/serializer": "~2.7|~3.0",
+                "symfony/validator": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
             },
             "suggest": {
-                "api-platform/core": "For using an API oriented framework.",
-                "friendsofsymfony/rest-bundle": "For using the parameters annotations.",
-                "phpdocumentor/reflection-docblock": "For parsing php docs."
+                "dunglas/api-bundle": "For making use of resources definitions of DunglasApiBundle.",
+                "friendsofsymfony/rest-bundle": "For making use of REST information in the doc.",
+                "jms/serializer": "For making use of serializer information in the doc.",
+                "symfony/form": "For using form definitions as input.",
+                "symfony/validator": "For making use of validator information in the doc."
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-dev": "3.0.x-dev"
+                    "dev-master": "2.13-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Nelmio\\ApiDocBundle\\": ""
+                "psr-0": {
+                    "Nelmio\\ApiDocBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1480,7 +1499,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2017-05-31T12:10:44+00:00"
+            "time": "2017-05-13T14:53:58+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2697,68 +2716,6 @@
                 "negotiation"
             ],
             "time": "2017-05-14T17:21:12+00:00"
-        },
-        {
-            "name": "zircote/swagger-php",
-            "version": "2.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "68e25262d95b9f70f145b488f49be0d6cc73302b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/68e25262d95b9f70f145b488f49be0d6cc73302b",
-                "reference": "68e25262d95b9f70f145b488f49be0d6cc73302b",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/annotations": "*",
-                "php": ">=5.6",
-                "symfony/finder": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.8 <=5.6",
-                "squizlabs/php_codesniffer": ">=2.7",
-                "zendframework/zend-form": "<2.8"
-            },
-            "bin": [
-                "bin/swagger"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Swagger\\": "src"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Robert Allen",
-                    "email": "zircote@gmail.com",
-                    "homepage": "http://www.zircote.com"
-                },
-                {
-                    "name": "Bob Fanger",
-                    "email": "bfanger@gmail.com",
-                    "homepage": "http://bfanger.nl"
-                }
-            ],
-            "description": "Swagger-PHP - Generate interactive documentation for your RESTful API using phpdoc annotations",
-            "homepage": "https://github.com/zircote/swagger-php/",
-            "keywords": [
-                "api",
-                "json",
-                "rest",
-                "service discovery"
-            ],
-            "time": "2017-05-12T22:02:20+00:00"
         }
     ],
     "packages-dev": [
@@ -2881,9 +2838,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "nelmio/api-doc-bundle": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
