@@ -55,6 +55,16 @@ class UsersController extends FOSRestController
     }
 
     /**
+     * /**
+     * @ApiDoc(
+     *  section = "Users",
+     *  description="Get all users",
+     *  output="array<AppBundle\Entity\User>",
+     *  statusCodes = {
+     *     200 = "Returned on success",
+     *   }
+     * )
+     *
      * @param Request $request
      * @return \FOS\RestBundle\View\View
      */
@@ -68,6 +78,23 @@ class UsersController extends FOSRestController
     }
 
     /**
+     * @ApiDoc(
+     *  section = "Users",
+     *  description="Update user with given id",
+     *  input= {
+     *    "class" = "AppBundle\Form\Type\UsersAddType",
+     *    "name" = "",
+     *  },
+     *     requirements={
+     *      {"name"="id", "dataType"="integer", "required"=true, "requirement"="\d+", "description"="The ID for the user you want to update"},
+     *  },
+     *  statusCodes = {
+     *     204 = "Returned when entity was successfully updated",
+     *     400 = "Returned when invalid parameters",
+     *     404 = "Returned when there is no entity with the given id."
+     *
+     *   }
+     * )
      * @param int $id
      * @return \FOS\RestBundle\View\View
      */
@@ -97,6 +124,22 @@ class UsersController extends FOSRestController
     }
 
     /**
+     * @ApiDoc(
+     *  section = "Users",
+     *  description="Delete user with given id",
+     *  input= {
+     *    "class" = "AppBundle\Form\Type\UsersAddType",
+     *    "name" = "",
+     *  },
+     *   requirements={
+     *      {"name"="id", "dataType"="integer", "required"=true, "requirement"="\d+", "description"="The ID for the user you want to delete."},
+     *  },
+     *  statusCodes = {
+     *     204 = "Returned when entity was successfully deleted.",
+     *     404 = "Returned when there is no entity with the given id.",
+     *
+     *   }
+     * )
      * @param int $id
      * @return \FOS\RestBundle\View\View
      */
@@ -115,6 +158,24 @@ class UsersController extends FOSRestController
         return $this->view();
     }
 
+    /**
+     * @ApiDoc(
+     *  section = "Users",
+     *  description="Get user with given id",
+     *  requirements={
+     *      {"name"="id", "dataType"="integer", "required"=true, "requirement"="\d+", "description"="The ID for the user you want to retrieve"},
+     *  },
+
+     *  statusCodes = {
+     *     200 = "Returned when entity was successfully retrieved.",
+     *     404 = "Returned when there is no entity with the given id.",
+     *
+     *   }
+     * )
+     *
+     * @param int $id
+     * @return \FOS\RestBundle\View\View
+     */
     public function getUserAction(int $id)
     {
         $doctrine = $this->getDoctrine();
